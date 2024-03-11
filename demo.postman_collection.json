@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "19aeecd7-c1b5-4502-9232-480691990c28",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ID\" : \"1001\",\n    \"Title\" : \"Mr.\",\n    \"Description\" : \"Test Entry\",\n    \"DueDate\" : \"2022-02-24\",\n    \"AssignedTo\" : \"Amit Kumar\",\n    \"Category\" : \"Preoss\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7080/demo/v1/create/new/task",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"demo",
+						"v1",
+						"create",
+						"new",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task Using ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7080/demo/v1/get/new/task?id=1001",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"demo",
+						"v1",
+						"get",
+						"new",
+						"task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task Using ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n    \"Description\" : \"Test Entry 2222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7080/demo/v1/update/new/task/1001",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"demo",
+						"v1",
+						"update",
+						"new",
+						"task",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delate Task Using MonoObjectId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7080/demo/v1/delete/new/task/65eca60dcbcc0f72acc56df7",
+					"host": [
+						"localhost"
+					],
+					"port": "7080",
+					"path": [
+						"demo",
+						"v1",
+						"delete",
+						"new",
+						"task",
+						"65eca60dcbcc0f72acc56df7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
